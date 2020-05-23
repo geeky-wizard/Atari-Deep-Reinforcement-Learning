@@ -13,11 +13,11 @@ Paper Link - https://arxiv.org/pdf/1312.5602.pdf
 
 # Deep Q-learning with Experience Replay :
 
+# Implementation Details :
+
 # Conclusions from the experiments :
 
 # Common Issues faced by us :
-
-# Implementation Details :
 
 # Environment Details :
 
