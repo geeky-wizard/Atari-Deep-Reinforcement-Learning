@@ -1,3 +1,16 @@
+import gym
+from PIL import Image
+import numpy as np
+import sys
+import gc
+import os
+from time import time, sleep
+
+from random import random, randint, randrange
+
+import pickle as p
+import joblib
+
 from hyperparameters import *
 from Agent import *
 from CNN import *
@@ -165,7 +178,7 @@ def train(env,agent):
 
 if __name__ == "__main__":
     print('Train or Test any atari games on this DDQN Network\n')
-    # Note : For games like breakout, where manual fire is necessary only a part of code in Training and Exploration needs to be changed.
+    # For games like breakout, where manual fire is necessary only a part of code in Training and Exploration needs to be changed.
     try:
         game_name = sys.argv[1]
     except IndexError:

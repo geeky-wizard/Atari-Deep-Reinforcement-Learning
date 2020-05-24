@@ -8,14 +8,6 @@ from time import time, sleep
 
 from random import random, randint, randrange
 
-from keras.models import Sequential
-from keras.layers import Conv2D
-from keras.layers import Dense
-from keras.layers import Flatten
-from keras.optimizers import RMSprop
-from keras.optimizers import Adam
-from keras.callbacks import CSVLogger
-
 import pickle as p
 import joblib
 

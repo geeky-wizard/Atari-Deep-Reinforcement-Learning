@@ -1,3 +1,16 @@
+import gym
+from PIL import Image
+import numpy as np
+import sys
+import gc
+import os
+from time import time, sleep
+
+from random import random, randint, randrange
+
+import pickle as p
+import joblib
+
 from hyperparameters import *
 from Agent import *
 from CNN import *
@@ -74,7 +87,7 @@ def initial_exploration(env,agent):
 
 def train(env,agent):
     log = open("log_"+game+".txt", 'a')
-    log.write("\n\n=================================  Starting Training Session  ==============================\n")
+    log.write("\n\n=================================  Starting Session  ==============================\n")
     timer = time()
     no_episodes = int(input("Number of Episodes? : "))
     
@@ -144,7 +157,7 @@ def train(env,agent):
         print(episode+1, "\tTotalReward = ", score, "\tSteps: ", steps, "\tMoving Avg: {:.2f}".format(avg_score),"\t Current Episilon = %f "%(agent.epsilon),"\tTime: %d" % (timer/60), "\b:{:.0f}".format((timer % 60)))
         agent.save()
     
-    log.write("=================================   Ending Training Session   ==============================\n")
+    log.write("=================================   Ending Session   ==============================\n")
     log.close()
     print("\nTraining Completed\n")
 
@@ -165,7 +178,7 @@ def train(env,agent):
 
 if __name__ == "__main__":
     print('Train or Test any atari games on this DDQN Network\n')
-    # Note : For games like breakout, where manual fire is necessary only a part of code in Training and Exploration needs to be changed.
+    # For games like breakout, where manual fire is necessary only a part of code in Training and Exploration needs to be changed.
     try:
         game_name = sys.argv[1]
     except IndexError:

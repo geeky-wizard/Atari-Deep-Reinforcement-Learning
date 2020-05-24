@@ -11,8 +11,7 @@ class Agent:
                  batch_size=BATCH_SIZE,
                  load_weights=True,
                  test=False):
-                
-        self.action_set = action_space  # if action_space <= 6 else 6
+         self.action_set = action_space  # if action_space <= 6 else 6
         self.input_shape = input_shape
         self.memory_size = memory
         self.epsilon = epsilon
