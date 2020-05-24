@@ -14,7 +14,7 @@ def test(env,agent):
         current_state = np.array([obsv, obsv, obsv, obsv])
         current_lives = TOTAL_LIVES  # Total Number of lives
         done = False
-        
+        # env.step(1)
         for _ in range(randint(1, NOOPMAX)):
             obsv, _, _, _ = env.step(0)
             obsv = process_state(obsv)
@@ -34,17 +34,10 @@ def test(env,agent):
             next_state = get_next_state(current_state, obsv)
 
             current_state = next_state
-            
-            if agent.game_name=='Breakout-v4' or agent.game_name=='Breakout-v0':
-                if info['ale.lives'] < current_lives:
-                    env.step(1) # Fire to continue game
-                    current_lives = info['ale.lives']
-                    # print('Lives Left = ', current_lives, '\tGame Over = ', done)
-
-            if agent.game_name=='Pong-v4' or agent.game_name=='Pong-v0':
-                if reward==1:
-                    env.step(1) # Fire to take service
-
+            # if info['ale.lives'] < current_lives:
+            #     action = 1
+            #     env.step(action)
+            #     current_lives = info['ale.lives']
             score += reward
             
         print("Total Reward: ", score, "\nSteps: ", steps)
@@ -131,9 +124,10 @@ def train(env,agent):
         done = False
         current_lives = TOTAL_LIVES  # Total Number of lives
         
-        if agent.game_name=='Breakout-v4' or agent.game_name=='Breakout-v0':
-            # Fire to start the game
-            env.step(1)
+        # env.reset()
+        # Fire to initiate game
+        # obsv,_,_,_ = env.step(1)
+        # obsv = process_state(obsv)
   
         obsv = process_state(env.reset())
         current_state = np.array([obsv, obsv, obsv, obsv])
