@@ -2,6 +2,7 @@ from hyperparameters import *
 from Agent import *
 from CNN import *
 from helper import *
+import Plot
 
 def test(env,agent):
     while run == 'y' or run == 'Y':
@@ -222,18 +223,20 @@ if __name__ == "__main__":
     while(1):
         choice = input("1. Train Agent\n2. Run Test\n3. View results of pre-trained weights\n: ")
         if  choice == '1':
-            if os.path.exists("Experiences"+game):
-                train(env,agent)
+            _log = input('Log Model History? (y/n):')
+            _log = True if _log=='y' else False if _log=='n' else None
+            if agent.load_state(True):
+                train(env,agent, _log)
             else:
                 initial_exploration(env,agent)
-                train(env,agent)
+                train(env,agent, _log)
             break
         elif choice == '2':
             test(env,agent)
             break
         elif choice == '3':
-
             # Pass graph generation function open using matplotlib
+            Plot.main()
             break
         else :
             print('Please Enter a valid choice\n')
