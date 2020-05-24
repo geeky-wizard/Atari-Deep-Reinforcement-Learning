@@ -231,13 +231,11 @@ if __name__ == "__main__":
             else:
                 initial_exploration(env,agent)
                 train(env,agent, _log)
-            env.close()
             break
         elif choice == '2':
             env = gym.make(game)
             agent = Agent((84, 84, 4),K, game, load_weights=True)
             test(env,agent)
-            env.close()
             break
         elif choice == '3':
             # Pass graph generation function open using matplotlib
@@ -245,3 +243,5 @@ if __name__ == "__main__":
             break
         else :
             print('Please Enter a valid choice\n')
+
+    env.close()
