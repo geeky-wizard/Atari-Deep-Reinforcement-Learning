@@ -52,9 +52,10 @@ def plot_avg(moving_avg, name=" ", n=10):
     plt.close()
 
     
-def main():
-    file = glob("log*.txt")
-    file = file[int(input(str([x for x in zip(range(1, file.__len__()+1), file)])[2:-2].replace("), (", "\n").replace(',', ':')+'\n\nEnter File Number: '))-1]
+def main(file = None):
+    if file is None:
+        file = glob("log*.txt")
+        file = file[int(input(str([x for x in zip(range(1, file.__len__()+1), file)])[2:-2].replace("), (", "\n").replace(',', ':')+'\n\nEnter File Number: '))-1]
     avg = []
     for line in open(file, 'r').readlines(-1):
         try:
