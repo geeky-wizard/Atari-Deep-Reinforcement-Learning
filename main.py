@@ -2,13 +2,14 @@ from hyperparameters import *
 from Agent import *
 from CNN import *
 from helper import *
-import Plot
+import plot
 
 def test(env,agent):
+    run = 'y'
     while run == 'y' or run == 'Y':
         obsv = process_state(env.reset())
 
-        if agent.game_name=='Breakout-v4' or agent.game_name=='Breakout-v0':
+        if agent.game=='Breakout-v4' or agent.game=='Breakout-v0':
             # Fire to start the game
             env.step(1)
         
@@ -36,13 +37,13 @@ def test(env,agent):
 
             current_state = next_state
             
-            if agent.game_name=='Breakout-v4' or agent.game_name=='Breakout-v0':
+            if agent.game=='Breakout-v4' or agent.game=='Breakout-v0':
                 if info['ale.lives'] < current_lives:
                     env.step(1) # Fire to continue game
                     current_lives = info['ale.lives']
                     # print('Lives Left = ', current_lives, '\tGame Over = ', done)
 
-            if agent.game_name=='Pong-v4' or agent.game_name=='Pong-v0':
+            if agent.game=='Pong-v4' or agent.game=='Pong-v0':
                 if reward==1:
                     env.step(1) # Fire to take service
 
@@ -66,7 +67,7 @@ def initial_exploration(env,agent):
 
         obsv = process_state(env.reset())
 
-        if agent.game_name=='Breakout-v4' or agent.game_name=='Breakout-v0':
+        if agent.game=='Breakout-v4' or agent.game=='Breakout-v0':
             # Fire to start the game
             env.step(1)
             
@@ -96,13 +97,13 @@ def initial_exploration(env,agent):
 
             current_state = next_state
             
-            if agent.game_name=='Breakout-v4' or agent.game_name=='Breakout-v0':
+            if agent.game=='Breakout-v4' or agent.game=='Breakout-v0':
                 if info['ale.lives'] < current_lives:
                     env.step(1) # Fire to continue game
                     current_lives = info['ale.lives']
                     # print('Lives Left = ', current_lives, '\tGame Over = ', done)
 
-            if agent.game_name=='Pong-v4' or agent.game_name=='Pong-v0':
+            if agent.game=='Pong-v4' or agent.game=='Pong-v0':
                 if reward==1:
                     env.step(1) # Fire to take service
                 
@@ -132,7 +133,7 @@ def train(env,agent):
         done = False
         current_lives = TOTAL_LIVES  # Total Number of lives
         
-        if agent.game_name=='Breakout-v4' or agent.game_name=='Breakout-v0':
+        if agent.game=='Breakout-v4' or agent.game=='Breakout-v0':
             # Fire to start the game
             env.step(1)
   
@@ -171,13 +172,13 @@ def train(env,agent):
     
             current_state = next_state
 
-            if agent.game_name=='Breakout-v4' or agent.game_name=='Breakout-v0':
+            if agent.game=='Breakout-v4' or agent.game=='Breakout-v0':
                 if info['ale.lives'] < current_lives:
                     env.step(1) # Fire to continue game
                     current_lives = info['ale.lives']
                     # print('Lives Left = ', current_lives, '\tGame Over = ', done)
 
-            if agent.game_name=='Pong-v4' or agent.game_name=='Pong-v0':
+            if agent.game=='Pong-v4' or agent.game=='Pong-v0':
                 if reward==1:
                     env.step(1) # Fire to take service
         
@@ -221,7 +222,7 @@ if __name__ == "__main__":
     agent = Agent((84, 84, 4),K, game, load_weights=True)
 
     while(1):
-        choice = input("1. Train Agent\n2. Run Test\n3. View results of pre-trained weights\n: ")
+        choice = input("\n1. Train Agent\n2. Run Test\n3. View results of pre-trained weights\n\n")
         if  choice == '1':
             _log = input('Log Model History? (y/n):')
             _log = True if _log=='y' else False if _log=='n' else None
@@ -236,7 +237,7 @@ if __name__ == "__main__":
             break
         elif choice == '3':
             # Pass graph generation function open using matplotlib
-            Plot.main("log_"+game_name+".txt")
+            plot.main("log_"+game_name+".txt")
             break
         else :
             print('Please Enter a valid choice\n')

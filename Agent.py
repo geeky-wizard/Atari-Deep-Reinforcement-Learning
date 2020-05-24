@@ -23,7 +23,6 @@ class Agent:
         print("Action Set: ", self.action_set)
         
         filepath = str(self.game + "_weights") if load_weights else None
-        print(str(self.game + "_weights"),os.path.exists(filepath))
 
         self.policy_network = CNN(self.input_shape,
                                   self.action_set,

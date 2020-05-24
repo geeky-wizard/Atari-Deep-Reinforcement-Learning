@@ -1,5 +1,4 @@
-from pillow import Image
-import gym
+from hyperparameters import *
 
 def process_state(observation):
     img = np.asanyarray(Image.fromarray(observation, 'RGB').convert('L').resize((84, 110)))
