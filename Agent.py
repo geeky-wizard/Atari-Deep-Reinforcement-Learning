@@ -58,8 +58,8 @@ class Agent:
             batch.append(self.experiences[randrange(0, self.experiences.__len__())])
         return np.asarray(batch)
 
-    def train(self):
-        self.policy_network.train(self.sample_experiences(), self.target_network)
+    def train(self, _log=False):
+        self.policy_network.train(self.sample_experiences(), self.target_network, _log)
 
     def greedy(self):
         if self.epsilon * self.decay > self.epsilon_min:
