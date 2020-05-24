@@ -236,7 +236,7 @@ if __name__ == "__main__":
             break
         elif choice == '3':
             # Pass graph generation function open using matplotlib
-            Plot.main()
+            Plot.main("log_"+game_name+".txt")
             break
         else :
             print('Please Enter a valid choice\n')
