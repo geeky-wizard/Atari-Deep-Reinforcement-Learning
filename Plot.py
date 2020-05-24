@@ -1,4 +1,3 @@
-#import pandas as pd
 from glob import glob
 import matplotlib.pyplot as plt
 
@@ -53,21 +52,8 @@ def plot_avg(moving_avg, name=" ", n=10):
     plt.close()
 
     
-def calcutae_moving_avg(avg):
-    m_av = []
-    alpha = 0.0
-    first = True
-    for x in avg:
-        if first:
-            m_av.append(alpha*x)
-            first = False
-        else:
-            m_av.append(alpha*m_av[-1] + (1 - alpha)*x)
-    plot_score(m_av)
-    #pd.DataFrame(m_av, columns=['avg']).to_csv('generated.txt', index=False)
-    
 def main():
-    file = glob("Log*.txt")
+    file = glob("log*.txt")
     file = file[int(input(str([x for x in zip(range(1, file.__len__()+1), file)])[2:-2].replace("), (", "\n").replace(',', ':')+'\n\nEnter File Number: '))-1]
     avg = []
     for line in open(file, 'r').readlines(-1):
@@ -77,7 +63,6 @@ def main():
             pass
     print('\nNo. of Episodes = ', avg.__len__(), '\nAverage Score = {:0.2f}'.format(sum(avg)/avg.__len__()))
     
-    #c = int(input('\n1. Plot Score vs Episode\n2. Plot Avgerage over n Episodes\n0. Exit:'))
     while True:
         c = int(input('\n\n1. Plot Score vs Episode\n2. Plot Avgerage over n Episodes\n0. Exit\n:'))
         
@@ -90,10 +75,4 @@ def main():
                 
         
 if __name__ == '__main__':
-    #csv_file = pd.read_csv("History.txt", usecols=['accuracy'])
-    #plot_accuracy(csv_file.accuracy)
-    #csv_file = pd.read_csv("generated.txt")
-    #plot_(csv_file.avg)
-    #csv_file = pd.read_csv("Avg.txt")
-    #calcutae_moving_avg(csv_file.avg)
     main()
