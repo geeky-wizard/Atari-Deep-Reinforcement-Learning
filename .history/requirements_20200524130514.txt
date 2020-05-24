@@ -1,0 +1,7 @@
+numpy==1.18.4
+gym
+keras==2.3.1
+matplotlib
+opencv-python
+tensorflow==1.15.0
+PIL
