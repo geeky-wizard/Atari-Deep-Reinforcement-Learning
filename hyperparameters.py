@@ -21,10 +21,10 @@ import joblib
 
 # Hyperparameters
 
-NUM_EXPLORE = 20 
+NUM_EXPLORE = 40 
 # 300 for Breakout
 
-TARGET_UPDATE_PERIOD = 5000
+TARGET_UPDATE_PERIOD = 6000
 # 1000 for Breakout
 
 LEARNING_RATE = 0.00025
@@ -40,7 +40,7 @@ MAX_EXPERIENCES = 40000 # Memory Size
 MIN_EPSILON = 0.1
 # 0.05 for Breakout
 
-DECAY_RATE = 0.9999
+DECAY_RATE = 0.99999
 
 TOTAL_LIVES = 5 # Depend on the game
 # 5 for Breakout

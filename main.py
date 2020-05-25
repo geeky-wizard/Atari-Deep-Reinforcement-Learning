@@ -50,7 +50,7 @@ def test(env,agent):
                 if reward==1:
                     env.step(1) # Fire to take service
 
-            score += reward
+            score += clipped_reward
             
         print("Total Reward: ", score, "\nSteps: ", steps)
         run = input("\nRUN TEST AGAIN? (Y/N) : ")
@@ -110,7 +110,7 @@ def initial_exploration(env,agent):
                 if reward==1:
                     env.step(1) # Fire to take service
                 
-            score += reward
+            score += clipped_reward
         
         timer = time() - timer
         avg_score = (avg_score + score)/2 if episode != 0 else score
@@ -122,7 +122,7 @@ def initial_exploration(env,agent):
     agent.save_state()
     print("\nEXPLORATION COMPLETED\n")
 
-def train(env,agent):
+def train(env,agent,_log=False):
     log = open("log_"+game+".txt", 'a')
     log.write("\n\n=================================  Starting Training Session  ==============================\n")
     timer = time()
@@ -168,7 +168,7 @@ def train(env,agent):
             agent.experience_gain(np.asarray([current_state]), action, clipped_reward, np.asarray([next_state]), done)
 
             if steps%4==0:
-                 agent.train()
+                 agent.train(_log)
                     
             if total_steps%TARGET_UPDATE_PERIOD==0:
                 agent.update_target_network()
@@ -230,10 +230,10 @@ if __name__ == "__main__":
             env = gym.make(game)
             agent = Agent((84, 84, 4),K, game, load_weights=True)
             if agent.load_state(True):
-                train(env,agent, _log)
+                train(env,agent,_log)
             else:
                 initial_exploration(env,agent)
-                train(env,agent, _log)
+                train(env,agent,_log)
             env.close()
             break
         elif choice == '2':
