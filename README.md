@@ -14,7 +14,9 @@ Paper Link - https://arxiv.org/pdf/1312.5602.pdf
 # Deep Q-learning with Experience Replay :
 We can't just use a simple Q-table for training games like chess,mario or breakout unless you have a memory size which can handle a state-space of order 10^100 and a super computer to speed up your computations. To avoid this problem, we use a Deep Q network(DQN). We approximate the Q(s, a) value.
 
-![CNN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/CNN.png)
+![DQN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/DQN_Algorithm.png)
+
+![CNN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/CNN.png)
 
 DQN
 
@@ -36,6 +38,6 @@ We have used Keras for all implementations and Matplotlib to visualize the graph
 * Initially in Breakout, our agent was getting decent score but it was because our agent was getting stuck at local minima. The Slider moved to the extreme of the frame to gain some initial advantage but was getting stuck there.
 
 # Environment Details :
-Please refer to our [requirements.txt](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/requirements.txt) file to get the enviroment details.
+Please refer to our [requirements.txt](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/requirements.txt) file to get the enviroment details.
 
 # Instructions to Run :
