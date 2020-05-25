@@ -37,3 +37,10 @@ We have used Keras for all implementations and Matplotlib to visualize the graph
 Please refer to our [requirements.txt](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/requirements.txt) file to get the enviroment details.
 
 # Instructions to Run :
+
+* pip install -r requirements.txt
+* Before training, make sure you set the hyperparameters[hyperparameters.py](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/hyperparameters.py)correctly.
+* python main.py GAME_NAME (By default, breakout is loaded and games are loaded in a deterministic enviroment(v4))
+* Choose among the options : 1 for train, 2 for test, 3 for seeing results on our pretrained weights(Log files are used for this purpose).
+* When training for first time, initial exploration will be done first and then training. User has to manually enter the number of episodes he want to train the agent.
+* All weights,experiences,logs and results can be found in the Assets folder.
