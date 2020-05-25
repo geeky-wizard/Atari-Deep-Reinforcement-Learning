@@ -78,7 +78,7 @@ class CNN:
 
 
     def save(self, filepath="model_weights"):
-        self.model.save_weights("Assets/Weights/"+filepath)
+        self.model.save_weights(filepath)
 
     def clean(self):
         del self.model

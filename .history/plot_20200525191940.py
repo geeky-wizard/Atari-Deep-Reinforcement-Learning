@@ -48,7 +48,7 @@ def plot_avg(moving_avg, name=" ", n=10):
     plt.ylabel("Average over {:d} Episodes".format(n))
     plt.xlabel("Number of Games Played")
     plt.show()
-    plt.savefig("Assets/Results/"+name+"_AvgOver"+str(n)+".png", transparent=True)
+    plt.savefig("Assets/Results/"+name+" Avg over"+str(n)+".png", transparent=True)
     plt.close()
 
     

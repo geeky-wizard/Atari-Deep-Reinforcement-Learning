@@ -22,7 +22,7 @@ class Agent:
         self.game = game_name
         print("Action Set: ", self.action_set)
         
-        filepath = str("Assets/Weights/"+self.game + "_weights") if load_weights else None
+        filepath = str(self.game + "_weights") if load_weights else None
 
         self.policy_network = CNN(self.input_shape,
                                   self.action_set,
@@ -92,7 +92,7 @@ class Agent:
         self.clean()
         print('Cleaned!\nWriting to file...')
         gc.disable()
-        with open("Assets/Experiences/Experiences" + self.game, 'wb') as experience_dump:
+        with open("Experiences" + self.game, 'wb') as experience_dump:
             joblib.dump((self.experiences,self.epsilon), experience_dump, compress=6,protocol=p.HIGHEST_PROTOCOL)  
             # p.dump((self.experiences, self.epsilon), experience_dump, protocol=p.HIGHEST_PROTOCOL)
         gc.enable()
