@@ -42,7 +42,7 @@ def test(env,agent):
                 if info['ale.lives'] < current_lives:
                     env.step(1) # Fire to continue game
                     current_lives = info['ale.lives']
-                    print('Lives Left = ', current_lives, '\tGame Over = ', done)
+                    # print('Lives Left = ', current_lives, '\tGame Over = ', done)
 
             if agent.game=='Pong-v4' or agent.game=='Pong-v0':
                 if reward==1:
@@ -52,7 +52,7 @@ def test(env,agent):
             
         print("Total Reward: ", score, "\nSteps: ", steps)
         run = input("\nRUN TEST AGAIN? (Y/N) : ")
-    print("Exiting Environment.")
+    print("\nExiting Environment.")
 
 def initial_exploration(env,agent):
 
@@ -223,7 +223,7 @@ if __name__ == "__main__":
     while(1):
         choice = input("\n1. Train Agent\n2. Run Test\n3. View results of pre-trained weights\n\n")
         if  choice == '1':
-            _log = input('Log Model History? (y/n):')
+            _log = input('Log Model History (y/n) ?  -  ')
             _log = True if _log=='y' else False if _log=='n' else None
             env = gym.make(game)
             agent = Agent((84, 84, 4),K, game, load_weights=True)
@@ -231,6 +231,7 @@ if __name__ == "__main__":
                 train(env,agent,_log)
             else:
                 initial_exploration(env,agent)
+                agent = Agent((84, 84, 4),K, game, load_weights=True)
                 train(env,agent,_log)
             env.close()
             break
@@ -245,4 +246,4 @@ if __name__ == "__main__":
             plot.main("log_"+game+".txt")
             break
         else :
-            print('Please Enter a valid choice\n')
+            print('\nPlease Enter a valid choice\n')
