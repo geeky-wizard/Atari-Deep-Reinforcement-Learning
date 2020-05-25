@@ -87,7 +87,7 @@ class Agent:
         while len(self.experiences) > MAX_EXPERIENCES:
             self.experiences.pop(0)
 
-        print("Saving %d Experience States...", self.experiences.__len__())
+        print("Saving Experience States...", self.experiences.__len__())
         print('Cleaning...')
         self.clean()
         print('Cleaned!\nWriting to file...')

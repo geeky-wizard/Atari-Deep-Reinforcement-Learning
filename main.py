@@ -6,8 +6,6 @@ import plot
 
 def test(env,agent):
 
-    env = gym.make('Breakout-v0')
-
     run = 'y'
     while run == 'y' or run == 'Y':
         obsv = process_state(env.reset())
@@ -37,7 +35,7 @@ def test(env,agent):
             obsv, reward, done, info = env.step(action)
             obsv = process_state(obsv)
             next_state = get_next_state(current_state, obsv)
-
+            clipped_reward = np.clip(reward, -1, 1)
             current_state = next_state
             
             if agent.game=='Breakout-v4' or agent.game=='Breakout-v0':
@@ -185,7 +183,7 @@ def train(env,agent,_log=False):
                 if reward==1:
                     env.step(1) # Fire to take service
         
-            score += reward
+            score += clipped_reward
         
         timer = time() - timer
         avg_score = (avg_score + score)/2 if episode != 0 else score
@@ -244,7 +242,7 @@ if __name__ == "__main__":
             break
         elif choice == '3':
             # Pass graph generation function open using matplotlib
-            plot.main("log_"+game_name+".txt")
+            plot.main("log_"+game+".txt")
             break
         else :
             print('Please Enter a valid choice\n')
