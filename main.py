@@ -56,7 +56,7 @@ def test(env,agent):
 
 def initial_exploration(env,agent):
 
-    log = open("log_"+game+".txt", 'w')
+    log = open("Assets/Logs/log_"+game+".txt", 'w')
     log.write("\n\n=================================  Starting Exploration  ==============================\n")
     print('Begining to Explore!!')
     
@@ -121,7 +121,7 @@ def initial_exploration(env,agent):
     print("\nEXPLORATION COMPLETED\n")
 
 def train(env,agent,_log=False):
-    log = open("log_"+game+".txt", 'a')
+    log = open("Assets/Logs/log_"+game+".txt", 'a')
     log.write("\n\n=================================  Starting Training Session  ==============================\n")
     timer = time()
     no_episodes = int(input("Number of Episodes? : "))

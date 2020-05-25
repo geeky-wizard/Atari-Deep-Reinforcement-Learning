@@ -865,3 +865,12 @@
 199	TotalReward = 4.0	Steps: 597	Moving Avg: 6.33	Time: 0:18 
 200	TotalReward = 13.0	Steps: 952	Moving Avg: 9.67	Time: 0:28 
 =================================   Ending Training Session   ==============================
+
+
+=================================  Starting Training Session  ==============================
+1	TotalReward = 3.0	Steps: 655	Moving Avg: 3.00	Time: 0:30 
+2	TotalReward = 4.0	Steps: 658	Moving Avg: 3.50	Time: 0:30 
+3	TotalReward = 16.0	Steps: 1513	Moving Avg: 9.75	Time: 1:08 
+4	TotalReward = 3.0	Steps: 665	Moving Avg: 6.38	Time: 0:30 
+5	TotalReward = 7.0	Steps: 664	Moving Avg: 6.69	Time: 0:30 
+=================================   Ending Training Session   ==============================
