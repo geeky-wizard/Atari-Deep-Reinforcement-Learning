@@ -13,7 +13,7 @@ Paper Link - https://arxiv.org/pdf/1312.5602.pdf
 
 # Deep Q-learning with Experience Replay :
 
-!CNN(https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/CNN.png)
+![CNN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/CNN.png)
 
 # Implementation Details :
 We have used Keras for all implementations and Matplotlib to visualize the graphs for rewards and losses. We have implemented the same alogrithm mentioned above. We had previously trained using both optimizers - RMSProp and Adam. Adam worked better for our implementation. Replay Memory Size was fixed at 40000 experiences because of ram limitations. Before training, initial exploration is done to gain some random experiences and fill up our replay memory. Our implementation can be used to train any atari game. We trained **Breakout** and **SpaceInvaders** in a deterministic enviroment using OpenAI Gym library. After training for _ episodes, we started getting satisfying results. Training for SpaceInvaders is still in progress but we hope to complete it soon with good results.
