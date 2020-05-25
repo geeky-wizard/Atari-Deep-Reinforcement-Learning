@@ -13,8 +13,9 @@ Paper Link - https://arxiv.org/pdf/1312.5602.pdf
 
 We are currently in the process of training our games. Please refer these drive links to get our latest weights.
 
-https://drive.google.com/drive/folders/1mT960D_pYUN5OaqYBTA4Pjemh10YbQCQ?usp=sharing
+AtariSpaceInvaders: https://drive.google.com/drive/folders/1mT960D_pYUN5OaqYBTA4Pjemh10YbQCQ?usp=sharing
 
+AtariBreakout : https://drive.google.com/drive/folders/1bDPZg1KYmhIQ3DThhxLvTkOLnwMzgFpK?usp=sharing
 
 
 # Deep Q-learning with Experience Replay :
