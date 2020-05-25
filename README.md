@@ -27,6 +27,14 @@ We have used Keras for all implementations and Matplotlib to visualize the graph
 
 # Results from our experiments :
 
+![Breakout avg](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/Assets/Results/Breakout%2050%20Avg.png)
+
+![Breakout score](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/Assets/Results/Breakout%20Score.png)
+
+![SpaceInvaders avg](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/Assets/Results/SpaceInvaders%20Avg%2010.png)
+
+![SpaceInvaders score](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning/blob/master/Assets/Results/SpaceInvaders%20Score.png)
+
 # Common Issues faced by us :
 
 * We need to take care of some issues in games like Breakout where fire has to be pressed manually after losing a life. This is done because the Q-value of "fire" becomes very less and it is very hard to determine those 5 occurences(5 Lives) of pressing fire. There is a similar problem in Pong as well.
