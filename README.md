@@ -18,11 +18,7 @@ We can't just use a simple Q-table for training games like chess,mario or breako
 
 ![CNN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/CNN.png)
 
-DQN
-
 With both experience replay and the target network, we have a more stable input and output to train the network and behaves more like supervised training.
-
-CNN
 
 This is the 4 layer CNN architecture used in the paper. We have used the same architecture to train our agent.
 
