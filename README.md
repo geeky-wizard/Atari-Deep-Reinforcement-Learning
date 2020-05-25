@@ -25,7 +25,7 @@ This is the 4 layer CNN architecture used in the paper. We have used the same ar
 # Implementation Details :
 We have used Keras for all implementations and Matplotlib to visualize the graphs for rewards and losses. We have implemented the same alogrithm mentioned above. We had previously trained using both optimizers - RMSProp and Adam. Adam worked better for our implementation. Replay Memory Size was fixed at 40000 experiences because of ram limitations. Before training, initial exploration is done to gain some random experiences and fill up our replay memory. Our implementation can be used to train any atari game. We trained **Breakout** and **SpaceInvaders** in a deterministic enviroment using OpenAI Gym library. After training for _ episodes, we started getting satisfying results. Training for SpaceInvaders is still in progress but we hope to complete it soon with good results.
 
-# Conclusions from the experiments :
+# Results from our experiments :
 
 # Common Issues faced by us :
 
