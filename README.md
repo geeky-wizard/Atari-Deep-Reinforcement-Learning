@@ -1,12 +1,12 @@
-# Atari-Deep-Reinforcement-Learning-
-
-This Repository is part of our NNFL Course Project(Paper ID - 83). 
-
 # Group Members :
 
 * Rohit Bohra - 2017A7PS0225P
 * Fauzaan Qureshi - 2017A2PS0663P
 * Kushaghra Raina - 2017A7PS0161P
+
+# Atari-Deep-Reinforcement-Learning-
+
+This Repository is part of our NNFL Course Project(Paper ID - 83). 
 
 We have implemented the algorithm(Deep Q-learning with Experience Replay) given in this novel paper.
 Paper Link - https://arxiv.org/pdf/1312.5602.pdf
@@ -14,13 +14,11 @@ Paper Link - https://arxiv.org/pdf/1312.5602.pdf
 # Deep Q-learning with Experience Replay :
 We can't just use a simple Q-table for training games like chess,mario or breakout unless you have a memory size which can handle a state-space of order 10^100 and a super computer to speed up your computations. To avoid this problem, we use a Deep Q network(DQN). We approximate the Q(s, a) value.
 
-![CNN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/CNN.png)
+![DQN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/DQN_Algorithm.png)
 
-DQN
+![CNN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/CNN.png)
 
 With both experience replay and the target network, we have a more stable input and output to train the network and behaves more like supervised training.
-
-CNN
 
 This is the 4 layer CNN architecture used in the paper. We have used the same architecture to train our agent.
 
@@ -36,6 +34,6 @@ We have used Keras for all implementations and Matplotlib to visualize the graph
 * Initially in Breakout, our agent was getting decent score but it was because our agent was getting stuck at local minima. The Slider moved to the extreme of the frame to gain some initial advantage but was getting stuck there.
 
 # Environment Details :
-Please refer to our [requirements.txt](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/requirements.txt) file to get the enviroment details.
+Please refer to our [requirements.txt](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/requirements.txt) file to get the enviroment details.
 
 # Instructions to Run :
