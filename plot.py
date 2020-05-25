@@ -20,7 +20,7 @@ def plot_score(moving_avg, name=" "):
     plt.ylabel(" Score")
     plt.xlabel("Number of Games Played")
     plt.show()
-    #plt.savefig(name+" Score.png", transparent=True)
+    plt.savefig(name+" Score.png", transparent=True)
     plt.close()
 
 
@@ -48,7 +48,7 @@ def plot_avg(moving_avg, name=" ", n=10):
     plt.ylabel("Average over {:d} Episodes".format(n))
     plt.xlabel("Number of Games Played")
     plt.show()
-    plt.savefig("Assets/Results/"+name+"_AvgOver"+str(n)+".png", transparent=True)
+    plt.savefig(name+"_AvgOver"+str(n)+".png", transparent=True)
     plt.close()
 
     
@@ -68,9 +68,9 @@ def main(file = None):
         c = int(input('\n\n1. Plot Score vs Episode\n2. Plot Avgerage over n Episodes\n0. Exit\n\n'))
         
         if c==1:
-            plot_score(avg, file[4:-4])
+            plot_score(avg, file[:-4])
         elif c==2:
-            plot_avg(avg, file[4:-4], int(input('\nEnter number of Episodes to average: ')))
+            plot_avg(avg, file[:-4], int(input('\nEnter number of Episodes to average: ')))
         elif c==0:
             return None
                 
