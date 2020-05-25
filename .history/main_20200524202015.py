@@ -5,9 +5,6 @@ from helper import *
 import plot
 
 def test(env,agent):
-
-    env = gym.make('Breakout-v0')
-
     run = 'y'
     while run == 'y' or run == 'Y':
         obsv = process_state(env.reset())
@@ -32,7 +29,7 @@ def test(env,agent):
             steps += 1
             env.render()
             sleep(0.01)
-            action = agent.move(np.asarray([current_state]))
+            action = agent.action(np.asarray([current_state]))
 
             obsv, reward, done, info = env.step(action)
             obsv = process_state(obsv)

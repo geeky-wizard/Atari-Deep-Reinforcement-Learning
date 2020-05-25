@@ -51,4 +51,4 @@ K = 4 # Change this!
 # Adam Optimizer
 ADAM_Opt = Adam(lr=LEARNING_RATE)
 
-EXPLORATION_TEST = 0.1
+EXPLORATION_TEST = 0.05

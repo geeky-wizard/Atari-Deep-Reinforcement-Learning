@@ -42,7 +42,7 @@ class Agent:
             return self.policy_network.predict(state).argmax()
 
     def move(self, state):
-        if random() < EXPLORATION_TEST:
+        if random() < self.EXPLORATION_TEST:
             return randint(0, K-1)  # randint(0, self.action_set-1)
         else:
             return self.policy_network.predict(state).argmax()

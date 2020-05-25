@@ -5,9 +5,6 @@ from helper import *
 import plot
 
 def test(env,agent):
-
-    env = gym.make('Breakout-v0')
-
     run = 'y'
     while run == 'y' or run == 'Y':
         obsv = process_state(env.reset())
