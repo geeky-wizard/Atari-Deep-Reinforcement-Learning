@@ -20,11 +20,11 @@ def test(env,agent):
         current_lives = TOTAL_LIVES  # Total Number of lives
         done = False
         
-        # for _ in range(randint(1, NOOPMAX)):
-        #     obsv, _, _, _ = env.step(0)
-        #     obsv = process_state(obsv)
-        #     next_state = get_next_state(current_state, obsv)
-        #     current_state = next_state
+        for _ in range(randint(1, NOOPMAX)):
+            obsv, _, _, _ = env.step(0)
+            obsv = process_state(obsv)
+            next_state = get_next_state(current_state, obsv)
+            current_state = next_state
 
         score = steps = reward = 0
 

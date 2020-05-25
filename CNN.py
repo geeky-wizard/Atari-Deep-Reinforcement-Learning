@@ -13,7 +13,7 @@ from hyperparameters import *
 class CNN:
     def __init__(self, input_dim, action_space,
                  discount_factor=DISCOUNT_FACTOR, learning_rate=LEARNING_RATE, batch_size=BATCH_SIZE, weights=None):
-        self.logger = CSVLogger(weights[:-11]+" Model Log.txt" if weights is not None else "History.txt",
+        self.logger = CSVLogger(weights[:-11]+"-model_Log.txt" if weights is not None else "History.txt",
                                 append=True)
         
         self.discount_factor = discount_factor
