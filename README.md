@@ -14,7 +14,7 @@ Paper Link - https://arxiv.org/pdf/1312.5602.pdf
 # Deep Q-learning with Experience Replay :
 We can't just use a simple Q-table for training games like chess,mario or breakout unless you have a memory size which can handle a state-space of order 10^100 and a super computer to speed up your computations. To avoid this problem, we use a Deep Q network(DQN). We approximate the Q(s, a) value.
 
-To approximate the next Q value, required to train the policy network, we make a clone of the policy network called the Target Network. To this target network, we pass the state of game that is reached due to the action dictated by the policy network's output, i.e, the Q values. Taking this state, the target network generates the Q-values for next action.
+To approximate the next Q value, required to train the policy network, we make a clone of the policy network called the Target Network. To this target network, we pass the state of game that is reached due to the action dictated by the policy network's output, i.e, the Q values. Taking this state as input, the target network generates the Q-values for next action.
 
 ![DQN](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/DQN_Algorithm.png)
 
