@@ -45,6 +45,23 @@
 
 
 =================================  Starting Training Session  ==============================
+
+
+=================================  Starting Training Session  ==============================
+1	TotalReward = 55.0	Steps: 600	Moving Avg: 55.00	Time: 0:18 
+2	TotalReward = 50.0	Steps: 660	Moving Avg: 52.50	Time: 0:19 
+3	TotalReward = 125.0	Steps: 736	Moving Avg: 88.75	Time: 0:22 
+4	TotalReward = 55.0	Steps: 492	Moving Avg: 71.88	Time: 0:15 
+5	TotalReward = 125.0	Steps: 787	Moving Avg: 98.44	Time: 0:23 
+6	TotalReward = 105.0	Steps: 724	Moving Avg: 101.72	Time: 0:20 
+7	TotalReward = 5.0	Steps: 527	Moving Avg: 53.36	Time: 0:15 
+8	TotalReward = 200.0	Steps: 1265	Moving Avg: 126.68	Time: 0:35 
+9	TotalReward = 105.0	Steps: 648	Moving Avg: 115.84	Time: 0:18 
+10	TotalReward = 105.0	Steps: 766	Moving Avg: 110.42	Time: 0:22 
+=================================   Ending Training Session   ==============================
+
+
+=================================  Starting Training Session  ==============================
 1	TotalReward = 16.0	Steps: 1083	Moving Avg: 16.00	Time: 0:30 
 2	TotalReward = 4.0	Steps: 417	Moving Avg: 10.00	Time: 0:12 
 3	TotalReward = 7.0	Steps: 645	Moving Avg: 8.50	Time: 0:19 
