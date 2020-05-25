@@ -11,6 +11,12 @@ This Repository is part of our NNFL Course Project(Paper ID - 83).
 We have implemented the algorithm(Deep Q-learning with Experience Replay) given in this novel paper.
 Paper Link - https://arxiv.org/pdf/1312.5602.pdf
 
+We are currently in the process of training our games. Please refer these drive links to get our latest weights.
+
+https://drive.google.com/drive/folders/1mT960D_pYUN5OaqYBTA4Pjemh10YbQCQ?usp=sharing
+
+
+
 # Deep Q-learning with Experience Replay :
 We can't just use a simple Q-table for training games like chess,mario or breakout unless you have a memory size which can handle a state-space of order 10^100 and a super computer to speed up your computations. To avoid this problem, we use a Deep Q network(DQN). We approximate the Q(s, a) value.
 
