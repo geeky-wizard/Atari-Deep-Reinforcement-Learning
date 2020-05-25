@@ -33,9 +33,6 @@ We have used Keras for all implementations and Matplotlib to visualize the graph
 
 * Initially in Breakout, our agent was getting decent score but it was because our agent was getting stuck at local minima. The Slider moved to the extreme of the frame to gain some initial advantage but was getting stuck there.
 
-# Environment Details :
-Please refer to our [requirements.txt](https://github.com/geeky-wizard/Atari-Deep-Reinforcement-Learning-/blob/master/Assets/Others/requirements.txt) file to get the enviroment details.
-
 # Instructions to Run :
 
 * pip install -r requirements.txt
