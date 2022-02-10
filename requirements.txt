@@ -3,6 +3,6 @@ gym
 keras==2.3.1
 matplotlib
 opencv-python
-tensorflow==1.15.0
+tensorflow==2.5.3
 PIL
 joblib
